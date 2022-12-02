@@ -1,6 +1,5 @@
 import React from 'react'
-import sun from '../../img/icons/sun.svg'
-import moon from '../../img/icons/moon.svg'
+import { HomeSvgSelector } from '../../pages/HomeSvgSelector/HomeSvgSelector'
 import './NavBar.css'
 
 export const NavBar = () => {
@@ -14,18 +13,20 @@ export const NavBar = () => {
 
                <button className='dark-mode-btn'>
                   <div className='dark-mode-btn__icon'>
-                     <img
+                     {/* <img
                         src={sun}
                         alt='Light mode'
                         className='dark-mode-btn__icon'
-                     />
+                     /> */}
+                     <HomeSvgSelector id='sun' />
                   </div>
                   <div></div>
-                  <img
+                  {/* <img
                      src={moon}
                      alt='Dark mode'
                      className='dark-mode-btn__icon'
-                  />
+                  /> */}
+                  <HomeSvgSelector id='moon' />
                </button>
 
                <ul className='nav-list'>
