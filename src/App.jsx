@@ -1,6 +1,5 @@
 import './styles/main.css'
-import sun from './img/icons/sun.svg'
-import moon from './img/icons/moon.svg'
+import { NavBar } from './components/NavBar/NavBar'
 import vk from './img/icons/vk.svg'
 import instagram from './img/icons/instagram.svg'
 import gitHub from './img/icons/gitHub.svg'
@@ -10,50 +9,7 @@ import twitter from './img/icons/twitter.svg'
 function App() {
    return (
       <div className='App'>
-         <nav className='nav'>
-            <div className='container'>
-               <div className='nav-row'>
-                  <a href='./index.html' className='logo'>
-                     <strong>Freelancer</strong> portfolio
-                  </a>
-
-                  <button className='dark-mode-btn'>
-                     <img
-                        src={sun}
-                        alt='Light mode'
-                        className='dark-mode-btn__icon'
-                     />
-                     <img
-                        src={moon}
-                        alt='Dark mode'
-                        className='dark-mode-btn__icon'
-                     />
-                  </button>
-
-                  <ul className='nav-list'>
-                     <li className='nav-list__item'>
-                        <a
-                           href='./index.html'
-                           className='nav-list__link nav-list__link--active'
-                        >
-                           Home
-                        </a>
-                     </li>
-                     <li className='nav-list__item'>
-                        <a href='./projects.html' className='nav-list__link'>
-                           Projects
-                        </a>
-                     </li>
-                     <li className='nav-list__item'>
-                        <a href='./contacts.html' className='nav-list__link'>
-                           Contacts
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
-
+         <NavBar />
          <header className='header'>
             <div className='header__wrapper'>
                <h1 className='header__title'>
@@ -90,37 +46,37 @@ function App() {
             </div>
          </main>
 
-         <footer class='footer'>
-            <div class='container'>
-               <div class='footer__wrapper'>
-                  <ul class='social'>
-                     <li class='social__item'>
+         <footer className='footer'>
+            <div className='container'>
+               <div className='footer__wrapper'>
+                  <ul className='social'>
+                     <li className='social__item'>
                         <a href='#!'>
                            <img src={vk} alt='Link' />
                         </a>
                      </li>
-                     <li class='social__item'>
+                     <li className='social__item'>
                         <a href='#!'>
                            <img src={instagram} alt='Link' />
                         </a>
                      </li>
-                     <li class='social__item'>
+                     <li className='social__item'>
                         <a href='#!'>
                            <img src={twitter} alt='Link' />
                         </a>
                      </li>
-                     <li class='social__item'>
+                     <li className='social__item'>
                         <a href='#!'>
                            <img src={gitHub} alt='Link' />
                         </a>
                      </li>
-                     <li class='social__item'>
+                     <li className='social__item'>
                         <a href='#!'>
                            <img src={linkedIn} alt='Link' />
                         </a>
                      </li>
                   </ul>
-                  <div class='copyright'>
+                  <div className='copyright'>
                      <p>© 2022 frontend-dev.com</p>
                   </div>
                </div>
