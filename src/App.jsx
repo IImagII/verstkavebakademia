@@ -1,31 +1,14 @@
 import './styles/main.css'
 import { NavBar } from './components/NavBar/NavBar'
-import vk from './img/icons/vk.svg'
-import instagram from './img/icons/instagram.svg'
-import gitHub from './img/icons/gitHub.svg'
-import linkedIn from './img/icons/linkedIn.svg'
-import twitter from './img/icons/twitter.svg'
+import { Header } from './components/Header/Header'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
    return (
       <div className='App'>
          <NavBar />
-         <header className='header'>
-            <div className='header__wrapper'>
-               <h1 className='header__title'>
-                  <strong>
-                     Hi, my name is <em>Yuri</em>
-                  </strong>
-                  <br />a frontend developer
-               </h1>
-               <div className='header__text'>
-                  <p>with passion for learning and creating.</p>
-               </div>
-               <a href='#!' className='btn'>
-                  Download CV
-               </a>
-            </div>
-         </header>
+
+         <Header />
 
          <main className='section'>
             <div className='container'>
@@ -46,42 +29,7 @@ function App() {
             </div>
          </main>
 
-         <footer className='footer'>
-            <div className='container'>
-               <div className='footer__wrapper'>
-                  <ul className='social'>
-                     <li className='social__item'>
-                        <a href='#!'>
-                           <img src={vk} alt='Link' />
-                        </a>
-                     </li>
-                     <li className='social__item'>
-                        <a href='#!'>
-                           <img src={instagram} alt='Link' />
-                        </a>
-                     </li>
-                     <li className='social__item'>
-                        <a href='#!'>
-                           <img src={twitter} alt='Link' />
-                        </a>
-                     </li>
-                     <li className='social__item'>
-                        <a href='#!'>
-                           <img src={gitHub} alt='Link' />
-                        </a>
-                     </li>
-                     <li className='social__item'>
-                        <a href='#!'>
-                           <img src={linkedIn} alt='Link' />
-                        </a>
-                     </li>
-                  </ul>
-                  <div className='copyright'>
-                     <p>© 2022 frontend-dev.com</p>
-                  </div>
-               </div>
-            </div>
-         </footer>
+         <Footer />
       </div>
    )
 }
