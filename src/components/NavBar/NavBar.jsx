@@ -1,5 +1,6 @@
 import React from 'react'
 import { HomeSvgSelector } from '../../pages/HomeSvgSelector/HomeSvgSelector'
+import { Link } from 'react-router-dom'
 import './NavBar.css'
 
 export const NavBar = () => {
@@ -13,40 +14,31 @@ export const NavBar = () => {
 
                <button className='dark-mode-btn'>
                   <div className='dark-mode-btn__icon'>
-                     {/* <img
-                        src={sun}
-                        alt='Light mode'
-                        className='dark-mode-btn__icon'
-                     /> */}
                      <HomeSvgSelector id='sun' />
                   </div>
-                  <div></div>
-                  {/* <img
-                     src={moon}
-                     alt='Dark mode'
-                     className='dark-mode-btn__icon'
-                  /> */}
+
                   <HomeSvgSelector id='moon' />
                </button>
 
                <ul className='nav-list'>
                   <li className='nav-list__item'>
-                     <a
-                        href='./index.html'
+                     <Link
+                        to='/'
                         className='nav-list__link nav-list__link--active'
                      >
                         Home
-                     </a>
+                     </Link>
                   </li>
+
                   <li className='nav-list__item'>
-                     <a href='./projects.html' className='nav-list__link'>
+                     <Link to='/projects' className='nav-list__link'>
                         Projects
-                     </a>
+                     </Link>
                   </li>
                   <li className='nav-list__item'>
-                     <a href='./contacts.html' className='nav-list__link'>
+                     <Link to='/contacts' className='nav-list__link'>
                         Contacts
-                     </a>
+                     </Link>
                   </li>
                </ul>
             </div>
