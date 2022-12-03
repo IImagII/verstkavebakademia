@@ -1,44 +1,60 @@
 import React from 'react'
 import { HomeSvgSelector } from '../../pages/HomeSvgSelector/HomeSvgSelector'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './NavBar.css'
 
 export const NavBar = () => {
+   const activeLink = 'nav-list__link nav-list__link--active'
+   const normalLink = 'nav-list__link'
+
    return (
       <nav className='nav'>
          <div className='container'>
             <div className='nav-row'>
-               <a href='./index.html' className='logo'>
+               <NavLink to='/' className='logo'>
                   <strong>Freelancer</strong> portfolio
-               </a>
+               </NavLink>
 
                <button className='dark-mode-btn'>
                   <div className='dark-mode-btn__icon'>
                      <HomeSvgSelector id='sun' />
                   </div>
-
-                  <HomeSvgSelector id='moon' />
+                  <div className='dark-mode-btn__icon'>
+                     <HomeSvgSelector id='moon' />
+                  </div>
                </button>
 
                <ul className='nav-list'>
                   <li className='nav-list__item'>
-                     <Link
+                     <NavLink
                         to='/'
-                        className='nav-list__link nav-list__link--active'
+                        className={({ isActive }) =>
+                           isActive ? activeLink : normalLink
+                        }
                      >
                         Home
-                     </Link>
+                     </NavLink>
                   </li>
 
                   <li className='nav-list__item'>
-                     <Link to='/projects' className='nav-list__link'>
+                     <NavLink
+                        to='/projects'
+                        className={({ isActive }) =>
+                           isActive ? activeLink : normalLink
+                        }
+                     >
                         Projects
-                     </Link>
+                     </NavLink>
                   </li>
                   <li className='nav-list__item'>
-                     <Link to='/contacts' className='nav-list__link'>
+                     <NavLink
+                        to='/contacts'
+                        className={({ isActive }) =>
+                           isActive ? activeLink : normalLink
+                        }
+                     >
                         Contacts
-                     </Link>
+                     </NavLink>
                   </li>
                </ul>
             </div>

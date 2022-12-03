@@ -5,18 +5,22 @@ import { Home } from './pages/Home/Home'
 import { Routes, Route } from 'react-router-dom'
 import { Projects } from './pages/Projects/Projects'
 import { Contacts } from './pages/Contscts/Contacts'
-import { Project } from './components/Project/Project'
+import { ProjectPages } from './pages/ProjectPages/ProjectPages'
+import { PageNotFound } from './pages/PageNotFound/PageNotFound'
+import ScrollToTop from './utils/scrollToTop'
 
 function App() {
    return (
       <div className='App'>
          <NavBar />
+         <ScrollToTop />
          <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/contacts' element={<Contacts />} />
+            <Route path='/projects/:id' element={<ProjectPages />} />
+            <Route path='*' element={<PageNotFound />} />
          </Routes>
-
          <Footer />
       </div>
    )

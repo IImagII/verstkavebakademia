@@ -1,6 +1,6 @@
 import './Project.css'
+
 export const Project = project => {
-   console.log('object :>> ', project)
    return (
       <li className='project'>
          <a href='./project-page.html'>
