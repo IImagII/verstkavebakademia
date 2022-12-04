@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+## Сайт Портфолио на React 
+Использованный стек технологий:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- React(
+- CSS
 
-## Available Scripts
+### Что сделано
+- сизменение темы через переменные и хук useEffect()
+- вывод карточек (использованы модовые данные в массиве)
+- подключены ряд функций которые автомитически меняют темы на темную если в настройках указана темная тема или со временем пользователем включена темная тема на сайте она поменяется автоматически
 
+Демо-версия проекта - https://verstkavebakademia.vercel.app/
