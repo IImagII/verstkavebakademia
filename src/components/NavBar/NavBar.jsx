@@ -1,6 +1,7 @@
 import React from 'react'
-import { HomeSvgSelector } from '../../pages/HomeSvgSelector/HomeSvgSelector'
+
 import { NavLink } from 'react-router-dom'
+import { BtnDarkMode } from '../BtnDarkMode/BtnDarkMode'
 import './NavBar.css'
 
 export const NavBar = () => {
@@ -14,16 +15,7 @@ export const NavBar = () => {
                <NavLink to='/' className='logo'>
                   <strong>Freelancer</strong> portfolio
                </NavLink>
-
-               <button className='dark-mode-btn'>
-                  <div className='dark-mode-btn__icon'>
-                     <HomeSvgSelector id='sun' />
-                  </div>
-                  <div className='dark-mode-btn__icon'>
-                     <HomeSvgSelector id='moon' />
-                  </div>
-               </button>
-
+               <BtnDarkMode />
                <ul className='nav-list'>
                   <li className='nav-list__item'>
                      <NavLink
